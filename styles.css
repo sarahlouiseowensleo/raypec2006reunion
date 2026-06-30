@@ -328,6 +328,29 @@ li::before {
 .light-card { background: var(--white); color: var(--black); border: 1px solid #f1e2c3; }
 .light-card p { color: var(--muted); }
 
+.activities-section {
+  background: linear-gradient(180deg, #fffdf7 0%, #fff8ea 100%);
+}
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+.activity-card {
+  background: rgba(255,255,255,.88);
+  border: 1px solid #f1e2c3;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 16px 45px rgba(0,0,0,.08);
+}
+.activity-card p { color: var(--muted); margin-bottom: 0; }
+.highlight-card {
+  background: linear-gradient(135deg, #111, #251a08);
+  color: var(--white);
+  border-color: rgba(210,154,19,.75);
+}
+.highlight-card p { color: rgba(255,255,255,.78); }
+
 .black-section {
   background:
     radial-gradient(circle at 18% 10%, rgba(210,154,19,.2), transparent 30%),
@@ -345,7 +368,7 @@ li::before {
 .page-title-block .lede { margin-left: auto; margin-right: auto; }
 .questionnaire-section { background: var(--cream); }
 .questionnaire-intro { margin-bottom: 28px; }
-.form-container { max-width: 980px; }
+.form-container { max-width: 760px; }
 .form-wrapper {
   width: 100%;
   background: var(--white);
@@ -355,8 +378,15 @@ li::before {
 .google-form {
   display: block;
   width: 100%;
-  min-height: 1800px;
+  min-height: 1500px;
   border: 0;
+}
+.form-cta {
+  margin-top: 18px;
+  min-height: 62px;
+  padding: 0 36px;
+  font-size: 18px;
+  border-radius: 14px;
 }
 
 .footer {
@@ -429,6 +459,7 @@ textarea { resize: vertical; }
   .hero-copy { border-left: 0; border-top: 2px solid rgba(210,154,19,.72); }
   .hero-brand-panel, .hero-brand-panel img { min-height: 260px; }
   .details-grid { grid-template-columns: repeat(2, 1fr); }
+  .activities-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 760px) {
@@ -441,8 +472,8 @@ textarea { resize: vertical; }
   .countdown div:nth-child(2) { border-right: 0; }
   .countdown-title { letter-spacing: .2em; font-size: 11px; }
   .section { padding: 56px 0; }
-  .details-grid, .ticket-section-grid, .two-column { grid-template-columns: 1fr; }
+  .details-grid, .ticket-section-grid, .two-column, .activities-grid { grid-template-columns: 1fr; }
   .info-card { text-align: left; }
   .ticket-box, .ticket-widget-card, .small-card, .modal-card { padding: 24px; }
-  .google-form { min-height: 1900px; }
+  .google-form { min-height: 1650px; }
 }
