@@ -63,17 +63,16 @@ button { font: inherit; }
     radial-gradient(circle at 86% 8%, rgba(243,200,90,.12), transparent 30%),
     linear-gradient(135deg, #000, #12100c 48%, #000);
 }
-
 .site-hero { padding-bottom: 18px; }
 .page-header { padding-bottom: 56px; }
 
 .hero-shell {
-  width: min(1280px, calc(100% - 32px));
+  width: min(1360px, calc(100% - 32px));
   margin: 0 auto 12px;
   display: grid;
-  grid-template-columns: minmax(0, 2.25fr) minmax(360px, .95fr);
+  grid-template-columns: minmax(0, 2.05fr) minmax(380px, .95fr);
   align-items: stretch;
-  min-height: 620px;
+  min-height: 560px;
   background:
     linear-gradient(90deg, rgba(0,0,0,.05), rgba(255,255,255,.03)),
     #050505;
@@ -82,9 +81,8 @@ button { font: inherit; }
   overflow: hidden;
   box-shadow: var(--shadow);
 }
-
 .hero-brand-panel {
-  min-height: 620px;
+  min-height: 560px;
   background: #020202;
   display: flex;
   align-items: center;
@@ -92,16 +90,14 @@ button { font: inherit; }
   padding: 0;
   overflow: hidden;
 }
-
 .hero-brand-panel img {
-  width: 118%;
-  height: 118%;
-  min-height: 620px;
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
   display: block;
   object-fit: cover;
-  object-position: left center;
+  object-position: 38% center;
 }
-
 .hero-copy {
   color: var(--white);
   padding: clamp(34px, 4vw, 56px);
@@ -109,8 +105,8 @@ button { font: inherit; }
   flex-direction: column;
   justify-content: center;
   border-left: 2px solid rgba(210,154,19,.72);
+  overflow: hidden;
 }
-
 .eyebrow {
   margin: 0 0 10px;
   text-transform: uppercase;
@@ -119,38 +115,30 @@ button { font: inherit; }
   font-weight: 900;
   color: var(--gold);
 }
-
 h1, h2, h3, p { margin-top: 0; }
-
 h1 {
-  font-size: clamp(52px, 5.4vw, 88px);
-  line-height: .9;
-  margin-bottom: 22px;
-  letter-spacing: -.055em;
+  max-width: 100%;
+  font-size: clamp(58px, 4.9vw, 84px);
+  line-height: .92;
+  margin-bottom: 24px;
+  letter-spacing: -.06em;
 }
 
 .nowrap {
   white-space: nowrap;
 }
-
 h2 {
   font-size: clamp(30px, 4vw, 48px);
   line-height: 1.04;
   letter-spacing: -.045em;
   margin-bottom: 14px;
 }
-
-h3 { 
-  font-size: 19px; 
-  line-height: 1.2; 
-  margin-bottom: 10px; 
-}
-
+h3 { font-size: 19px; line-height: 1.2; margin-bottom: 10px; }
 .lede {
-  max-width: 560px;
+  max-width: 360px;
   margin-bottom: 28px;
   color: rgba(255,255,255,.84);
-  font-size: clamp(17px, 2vw, 20px);
+  font-size: clamp(17px, 1.6vw, 20px);
 }
 
 .button {
@@ -167,22 +155,16 @@ h3 {
   cursor: pointer;
   transition: transform .16s ease, box-shadow .16s ease, filter .16s ease;
 }
-
 .button:hover { transform: translateY(-2px); filter: brightness(1.05); }
-
 .primary {
   background: linear-gradient(135deg, var(--gold-light), var(--gold));
   color: #0b0b0b;
   box-shadow: 0 12px 25px rgba(210,154,19,.25);
 }
-
-.hero-ticket { 
-  width: fit-content; 
-  min-width: 210px; 
-}
+.hero-ticket { width: fit-content; min-width: 210px; }
 
 .countdown-band {
-  width: min(1280px, calc(100% - 32px));
+  width: min(1360px, calc(100% - 32px));
   margin: 0 auto;
   padding: 16px 22px 20px;
   border: 1px solid rgba(210,154,19,.88);
@@ -401,7 +383,7 @@ li::before {
 .google-form {
   display: block;
   width: 100%;
-  min-height: 800px;
+  min-height: 1500px;
   border: 0;
 }
 .form-cta {
@@ -477,27 +459,135 @@ input, textarea {
 }
 textarea { resize: vertical; }
 
+@media (max-width: 1180px) {
+  .hero-shell,
+  .countdown-band {
+    width: min(100% - 28px, 1280px);
+  }
+
+  .hero-shell {
+    grid-template-columns: minmax(0, 1.75fr) minmax(340px, .9fr);
+    min-height: 500px;
+  }
+
+  .hero-brand-panel,
+  .hero-brand-panel img {
+    min-height: 500px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(50px, 5vw, 72px);
+  }
+}
+
 @media (max-width: 1050px) {
-  .hero-shell { grid-template-columns: 1fr; }
-  .hero-copy { border-left: 0; border-top: 2px solid rgba(210,154,19,.72); }
-  .hero-brand-panel, .hero-brand-panel img { min-height: 260px; }
-  .details-grid { grid-template-columns: repeat(2, 1fr); }
-  .activities-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-shell {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-brand-panel {
+    min-height: 420px;
+  }
+
+  .hero-brand-panel img {
+    min-height: 420px;
+    object-position: center center;
+  }
+
+  .hero-copy {
+    border-left: 0;
+    border-top: 2px solid rgba(210,154,19,.72);
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(52px, 9vw, 82px);
+  }
+
+  .lede {
+    max-width: 560px;
+  }
+
+  .details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .activities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 760px) {
-  .nav { overflow-x: auto; justify-content: flex-start; padding-bottom: 12px; gap: 20px; }
-  .site-hero { padding-bottom: 12px; }
-  .hero-shell, .countdown-band { width: min(100% - 22px, 1280px); }
-  .hero-copy { padding: 30px 24px; }
-  .hero-brand-panel, .hero-brand-panel img { min-height: 210px; }
-  .countdown { grid-template-columns: repeat(2, 1fr); row-gap: 16px; }
-  .countdown div:nth-child(2) { border-right: 0; }
-  .countdown-title { letter-spacing: .2em; font-size: 11px; }
-  .section { padding: 56px 0; }
-  .details-grid, .ticket-section-grid, .two-column, .activities-grid { grid-template-columns: 1fr; }
-  .info-card { text-align: left; }
-  .ticket-box, .ticket-widget-card, .small-card, .modal-card { padding: 24px; }
-  .google-form { min-height: 800px; }
-}
+  .nav {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 12px;
+    gap: 20px;
+  }
 
+  .site-hero {
+    padding-bottom: 12px;
+  }
+
+  .hero-shell,
+  .countdown-band {
+    width: min(100% - 22px, 1280px);
+  }
+
+  .hero-brand-panel {
+    min-height: 290px;
+  }
+
+  .hero-brand-panel img {
+    min-height: 290px;
+    object-position: center center;
+  }
+
+  .hero-copy {
+    padding: 30px 24px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(44px, 15vw, 64px);
+  }
+
+  .countdown {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+  }
+
+  .countdown div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .countdown-title {
+    letter-spacing: .2em;
+    font-size: 11px;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .details-grid,
+  .ticket-section-grid,
+  .two-column,
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    text-align: left;
+  }
+
+  .ticket-box,
+  .ticket-widget-card,
+  .small-card,
+  .modal-card {
+    padding: 24px;
+  }
+
+  .google-form {
+    min-height: 1650px;
+  }
+}
