@@ -311,3 +311,12 @@ textarea { resize: vertical; }
   .details-card, .notice-card, .embed-card, .ticket-box, .modal-card { padding: 24px; }
   .google-form { min-height: 1800px; }
 }
+
+.small-note {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.light-text {
+  color: rgba(255,255,255,.72);
+}
