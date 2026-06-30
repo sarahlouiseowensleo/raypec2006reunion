@@ -378,7 +378,7 @@ li::before {
 .google-form {
   display: block;
   width: 100%;
-  min-height: 1500px;
+  min-height: 800px;
   border: 0;
 }
 .form-cta {
@@ -475,6 +475,6 @@ textarea { resize: vertical; }
   .details-grid, .ticket-section-grid, .two-column, .activities-grid { grid-template-columns: 1fr; }
   .info-card { text-align: left; }
   .ticket-box, .ticket-widget-card, .small-card, .modal-card { padding: 24px; }
-  .google-form { min-height: 1650px; }
+  .google-form { min-height: 800px; }
 }
 
